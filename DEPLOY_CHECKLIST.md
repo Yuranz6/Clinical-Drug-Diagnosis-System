@@ -26,15 +26,12 @@
 - [ ] 使用 `render.yaml` 自动配置，或手动配置：
   - [ ] Name: `cdss-api`
   - [ ] Environment: `Python 3`
-  - [ ] Build Command: `pip install -r requirements.txt && python download_data.py || echo "数据文件下载失败，部分功能将不可用"`
+  - [ ] Build Command: `pip install -r requirements.txt`（模型-only：不下载数据文件）
   - [ ] Start Command: `gunicorn cdss_api:app`
   - [ ] Python Version: `3.9.18`
 
 ### 步骤 2: 环境变量（可选）
-如果需要从 B2 下载数据：
-- [ ] `B2_KEY_ID` - Backblaze B2 Key ID
-- [ ] `B2_APPLICATION_KEY` - Backblaze B2 Application Key
-- [ ] `B2_BUCKET_NAME` - B2 Bucket 名称
+模型-only 部署 **不需要** 配置 B2 环境变量。
 
 ### 步骤 3: 部署
 - [ ] 点击 "Create Web Service"
