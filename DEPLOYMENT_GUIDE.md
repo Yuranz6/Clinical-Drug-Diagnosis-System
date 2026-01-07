@@ -77,7 +77,8 @@
 - **Environment**: `Python 3`
 - **Build Command**: 
   ```bash
-  pip install -r requirements.txt && python download_data.py || echo "数据文件下载失败，部分功能将不可用"
+  # 模型-only 部署：不下载B2数据
+  pip install -r requirements.txt
   ```
 - **Start Command**: 
   ```bash
